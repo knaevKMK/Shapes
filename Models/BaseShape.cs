@@ -5,13 +5,13 @@
     {
         protected EnumMode Mode { get; set; }
 
-        private int _totalCornerDegreeInShape { get; set; }
-        public int TotalCornerDegreeInShape { get => ((int)this.Mode) * _totalCornerDegreeInShape; }
+        private int _totalCorners { get; set; }
+        public int TotalCorners { get => ((int)this.Mode) * _totalCorners; }
 
         protected BaseShape(EnumMode mode, int totalDegreee)
         {
             Mode = mode;
-            _totalCornerDegreeInShape = totalDegreee;
+            _totalCorners = totalDegreee;
         }
 
         public abstract string Area();

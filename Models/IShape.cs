@@ -2,5 +2,5 @@
 public interface IShape
 {
     public string Area();
-    public int TotalCornerDegreeInShape { get; }
+    public int TotalCorners { get; }
 }

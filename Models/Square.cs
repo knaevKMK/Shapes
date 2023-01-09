@@ -5,9 +5,9 @@ namespace Models
 {
     public class Square : BaseShape
     {
-        private const int defaultDegree = 360;
+        private const int totalCorners = 4;
         public decimal A { get; set; }
-        public Square(string a, EnumMode mode) : base(mode, defaultDegree)
+        public Square(string a, EnumMode mode) : base(mode, totalCorners)
         {
             this.A = decimal.Parse(a);
 

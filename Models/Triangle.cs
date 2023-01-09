@@ -4,12 +4,12 @@ namespace Models
 {
     public sealed class Triangle : BaseShape
     {
-        private const int defaultDegree = 180;
+        private const int totalCorners = 4;
         public decimal A { get; set; }
         public decimal B { get; set; }
         public decimal H { get; set; }
 
-        public Triangle(string a, string b, string h, EnumMode mode) : base(mode, defaultDegree)
+        public Triangle(string a, string b, string h, EnumMode mode) : base(mode, totalCorners)
         {
             this.A = decimal.Parse(a);
             this.B = decimal.Parse(b);
