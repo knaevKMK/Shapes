@@ -17,6 +17,8 @@ namespace Models
             this.B = decimal.Parse(b);
 
         }
+        public override int TotalCornerDegreeInShape() => 360;
+
         public override string Area()
         {
             decimal v = decimal.Multiply(B, A);

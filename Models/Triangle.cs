@@ -12,6 +12,7 @@
             this.B = decimal.Parse(b);
             this.H = decimal.Parse(h);
         }
+        public override int TotalCornerDegreeInShape() => 180;
 
         public override string Area()
         {

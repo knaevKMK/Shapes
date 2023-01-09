@@ -9,6 +9,7 @@ namespace Models
     public abstract class BaseShape : IShape
     {
         public abstract string Area();
+        public abstract int TotalCornerDegreeInShape();
 
         public override string? ToString()
         {
