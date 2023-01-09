@@ -1,15 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Models
+﻿namespace Models
 {
+    using Models.Enums;
     public abstract class BaseShape : IShape
     {
+        protected EnumMode Mode { get; set; }
+
+        private int _totalCornerDegreeInShape { get; set; }
+        public int TotalCornerDegreeInShape { get => ((int)this.Mode) * _totalCornerDegreeInShape; }
+
+        protected BaseShape(EnumMode mode, int totalDegreee)
+        {
+            Mode = mode;
+            _totalCornerDegreeInShape = totalDegreee;
+        }
+
         public abstract string Area();
-        public abstract int TotalCornerDegreeInShape();
 
         public override string? ToString()
         {
